@@ -1,0 +1,145 @@
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .GalleryContainer {
+    position: relative;
+    width: 500px;
+    padding: 3px;
+    margin: 2% 15%;
+  }
+  
+  /* Hide the images by default */
+  .GalleryContainer .mySlides {
+    display: none;
+  }
+  .GalleryContainer .mySlides img{
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  #caption{
+    height: 15px;
+
+  }
+  /* Next & previous buttons */
+  .GalleryContainer .prev,
+  .GalleryContainer .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    /* border-radius: 0 3px 3px 0; */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .GalleryContainer .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+  .GalleryContainer .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .GalleryContainer .prev:hover,
+  .GalleryContainer .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    
+  }
+
+  .GalleryContainer .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .GalleryContainer .row {
+    display: flex;
+    background-color: #0000008e;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 1rem;
+  }
+  .GalleryContainer .row::-webkit-scrollbar { 
+    display: none; /* Chrome, Safari and Opera */
+  }
+  
+
+  .GalleryContainer .column {
+    float: left;
+    width: 16%;
+    flex: 0 0 auto;
+
+
+  }
+  .demo.active {
+    border: solid red;
+  }
+  
+  .GalleryContainer .column img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+  }
+  .file-input-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-button {
+    padding: 5px 20px;
+    background-color: #66a8d4; 
+    color: white; 
+    border-radius:5px; 
+    border: none;
+    font-weight: bold;
+    }
+  
+  .hidden-file-input {
+    width:100%;     /*크기를 지정해주어야 버튼에서만 인풋이 가능*/
+    height:100%;
+    position:absolute;
+    left:0;
+    top:0;
+    opacity:0; 
+  }
+    
+  .GalleryContainer .demo {
+    opacity: 0.6;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .GalleryActive,
+  .demo:hover {
+    opacity: 1;
+  }
+  .GalleryActive img{
+    width: 100px;
+  }

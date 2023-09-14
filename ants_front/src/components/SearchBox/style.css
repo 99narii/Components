@@ -1,0 +1,14 @@
+.searchInput {
+    border: 1px solid #fff;
+    background-color: #fff;
+    width: 200px;
+    height: 1rem;
+    padding-left: 0.3rem;
+}
+.searchBtn {
+    border: 1px solid #fff;
+    height: 1.25rem;
+    width: 2.4rem;
+    background-color: #303030;
+    color: #fff;
+}

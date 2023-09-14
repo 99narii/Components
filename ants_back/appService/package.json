@@ -1,0 +1,15 @@
+{
+  "name": "appservice",
+  "version": "1.0.0",
+  "description": "antswebtemplate",
+  "main": "execute",
+  "scripts": {
+    "start": "set operation=dev && node execute",
+    "test": "set operation=prd && node execute"
+  },
+  "author": "antsnest",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.11.3"
+  }
+}
