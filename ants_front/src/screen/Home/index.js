@@ -16,6 +16,7 @@ export default function Home() {
             .then((msg) => setItem_sample(msg))
             .catch(err => alert('Error' + err));
     }
+    
     return (
         <div>
             Ants Front Tamplete{lotGridRows}

@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 var ConnectionString = {
-  host: '54.180.179.62',
-  user: 'dexterity',
-  password: 'Sharp21#',
-  database: 'skynet'
+  host: 'antsnest.cdn9c8wfru7l.ap-northeast-2.rds.amazonaws.com',
+  user: 'antsnest',
+  password: 'ants0814#C#',
+  database: 'ants_components'
 }
 var connection = mysql.createConnection(ConnectionString);
 
@@ -22,6 +22,6 @@ function execute(query, param) {
   );
 }
 setInterval(function () {
-  connection.query('select 1');
+  connection.query('select * from components_list');
 }, 60000);
 module.exports = { connection, pool, execute };

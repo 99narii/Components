@@ -1,0 +1,56 @@
+.calender {
+    width: 400px;
+    margin: auto;
+    border: 1px solid rgb(102, 102, 102);
+    margin: 1rem;
+}
+
+.react-calendar {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.react-calendar__navigation__label {
+    /*월*/
+    border: none;
+    border-bottom: 5px solid #dbdbdb70;
+    background-color: #fff;
+}
+
+.react-calendar__navigation__arrow {
+    background-color: #fff;
+    color: rgb(66, 66, 66);
+    border: none;
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+    /*요일*/
+    text-decoration: none;
+    font-size: 0.5em;
+    margin-top: 1rem;
+    color: #868686;
+    font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+    /*해당 월 외 날자*/
+    color: #dbdbdb !important;
+}
+
+.react-calendar__month-view__days__day {
+    /*날자 칸*/
+    color: #292929;
+    height: 55px;
+    border: none;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.highlight {
+    border-radius: 0%;
+    color: tomato;
+}

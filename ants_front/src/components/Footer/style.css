@@ -6,9 +6,13 @@
     background-color: #020202;
     color: rgb(255, 255, 255);
     padding: 0rem 3rem;
-
 }
 
 .footer-links {
     text-align: left;
+}
+@media (max-width: 768px) { /* 화면 너비가 768px 이상일 때 적용될 스타일 */
+    .footer {
+        padding: 1rem;
+    }
 }

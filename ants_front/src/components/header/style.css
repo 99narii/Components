@@ -26,9 +26,33 @@ a {
 
 .nav-links {
     list-style-type: none;
+    display: block;
 }
 
 .nav-links li {
     display: inline-block;
     margin-left: 4rem;
+    font-weight: bold;
+}
+.toggle-button {
+    display: none; 
+}
+
+
+/* 토글 제대로 동작안함 */
+@media (max-width: 600px) {
+    .headerObj {
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links {
+        display: block; 
+        flex-direction: column;
+    }
+
+    .toggle-button {
+        display: block; /* 토글 버튼 숨김 */
+    }
 }

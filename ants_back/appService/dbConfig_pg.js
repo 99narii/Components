@@ -1,27 +1,33 @@
-const mysql = require('mysql');
+const { Pool } = require('pg');
 
-var ConnectionString = {
-  host: '54.180.179.62',
-  user: 'dexterity',
+// Create a configuration object for the PostgreSQL connection
+const config = {
+  host: 'rds.luxkiz.com',
+  user: 'luxkiz',
+  database: 'luxkiz',
   password: 'Sharp21#',
-  database: 'skynet'
-}
-var connection = mysql.createConnection(ConnectionString);
+  port: 5432,
+  // Optional: Maximum number of clients in the pool
+  max: 20,
+  ssl: { rejectUnauthorized: false },
+  
+  // Optional: Maximum milliseconds a client can stay idle before being removed
+  idleTimeoutMillis: 30000,
+  // Optional: Maximum milliseconds a client can stay active before being removed
+  connectionTimeoutMillis: 2000,
+};
 
-var pool = mysql.createPool(ConnectionString);
-connection.connect();
+const pool = new Pool(config);
 
-function execute(query, param) {
-  return new Promise((resolve, reject) =>
-    pool.query(query, param, (error, result, fields) => {
-      if (error) {
-        reject(error);
-      }
-      resolve(result);
-    })
-  );
-}
-setInterval(function () {
-  connection.query('select 1');
-}, 60000);
-module.exports = { connection, pool, execute };
+pool.connect((err, client, done) => {
+  if (err) {
+    console.error('Error connecting to PostgreSQL', err);
+  } else {
+    console.log('Successfully connected to PostgreSQL');
+    // Once you've done with the client, call done()
+    
+    done();
+  }
+});
+
+module.exports = pool;
