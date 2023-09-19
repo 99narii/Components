@@ -13,7 +13,7 @@ import ImgInput from './components/ImgInput';
 // import { CalendarPage } from './components/calender';
 import Gallery from './components/gallery';
 import Countdown from './components/DdayNotMoment';
-
+import Contact from './components/ContactForm';
 
 function App() {
   return (
@@ -21,19 +21,22 @@ function App() {
       <header className="App-header">
         <Navigator />
       </header>
+      <body>
       <Routes>
         <Route exact path="/" element={
           <HomeProvider>
             <Sidebar />
             <SearchBox />
-            <Countdown />
-            <Gallery />
-            <ImgInput />
-            <ImgSlide />
+            {/* <ImgInput /> */}
+            <Contact />
+            {/* <Countdown /> */}
+            {/* <Gallery /> */}
+            {/* <ImgSlide /> */}
             {/* <CalendarPage /> */}
             <Footer company="antsnest" email="info@antsnest.com" />
           </HomeProvider>} key="Home" />
       </Routes>
+      </body>
     </div>
   );
 }
