@@ -4,6 +4,8 @@ import './style.css';
 
 export default function Contact() {
     const [phone, setPhone] = useState('');
+    const [lastPhoneValue, setLastPhoneValue] = useState('');
+
 
     const handlePhoneChange = (event) => {
         let value = event.target.value.replace(/\D/g, ''); //숫자 입력만 받기
@@ -52,8 +54,16 @@ export default function Contact() {
             formattedValue = value;
         }
         setPhone(formattedValue);
+        
+        if (value.length < lastPhoneValue.length) {
+            formattedValue = formattedValue.slice(0, -1);
+        }
+    
+        setLastPhoneValue(value);
+        
+        setPhone(formattedValue);
     };
-
+    
     return (
         <div className='contactPage'>
             <section>
